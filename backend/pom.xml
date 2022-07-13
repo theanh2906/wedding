@@ -81,7 +81,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <build>
-        <finalName>demo</finalName>
+        <finalName>wedding</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
