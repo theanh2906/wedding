@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8286603-fcb4-46bf-85c5-9a8c5cb2bb49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/web/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/web/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/web/angular.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +217,7 @@
       <workItem from="1657214853759" duration="1075000" />
       <workItem from="1657555097648" duration="3280000" />
       <workItem from="1657643753564" duration="3583000" />
-      <workItem from="1657727458141" duration="1402000" />
+      <workItem from="1657727458141" duration="1613000" />
     </task>
     <servers />
   </component>
