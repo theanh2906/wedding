@@ -1,0 +1,56 @@
+@import 'src/styles/variables';
+.target-date {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 3rem 0;
+  font-weight: bold;
+  .title {
+    text-align: center;
+    font-size: $font-size + 1rem;
+    color: $color-pink;
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    .block {
+      width: 100px;
+      height: 100px;
+      //border: 1px dashed;
+      border-radius: 50%;
+      margin: 10px 0 0 0;
+      text-align: center;
+      background: $color-pink;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+      animation: pulse 1s ease infinite;
+      > p {
+        margin: 0.5rem 0;
+        font-size: 20px;
+      }
+    }
+  }
+  .save-date {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    a {
+      font-size: $font-size-menu;
+      text-decoration: none;
+      color: $color-pink;
+      background: $color-white;
+      padding: 1rem;
+      border-radius: 30px;
+    }
+  }
+
+  .times {
+    font-size: 22px;
+  }
+}
