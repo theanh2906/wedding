@@ -47,8 +47,8 @@
               ],
               "outputHashing": "all",
               "index": {
-                "input": "index.prod.html",
-                "output": "index.html"
+                "input": "src/index.prod.html",
+                "output": "src/index.html"
               }
             },
             "development": {
