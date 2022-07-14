@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8286603-fcb4-46bf-85c5-9a8c5cb2bb49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/web/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/web/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
     "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.vendoring.notification.had.been.shown": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "go.import.settings.migrated": "true",
@@ -218,6 +220,7 @@
       <workItem from="1657555097648" duration="3280000" />
       <workItem from="1657643753564" duration="3583000" />
       <workItem from="1657727458141" duration="2391000" />
+      <workItem from="1657810040856" duration="1853000" />
     </task>
     <servers />
   </component>
