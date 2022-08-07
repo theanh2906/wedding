@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import 'variables';
-* {
-  font-family: $font-family-base;
-}
 
 @font-face {
   font-family: 'icomoon';
@@ -397,8 +394,7 @@ figure {
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
   color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size: 25px;
   letter-spacing: 2px;
   font-weight: 600;
 }
@@ -1089,6 +1085,7 @@ form label {
 @media screen and (max-width: 768px) {
   .couple-half {
     width: 100%;
+    display: flex;
   }
 }
 .couple-half {
@@ -1241,7 +1238,6 @@ form label {
   }
 }
 .fh5co-heading span {
-  text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
   font-weight: 600;

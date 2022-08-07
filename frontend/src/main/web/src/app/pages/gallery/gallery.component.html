@@ -1,0 +1,13 @@
+<h1 class="text-center m-3">Pre-wedding</h1>
+<div class="gallery">
+  <p-image
+    *ngFor="let image of images"
+    [alt]="image.alt"
+    [preview]="true"
+    [src]="image.previewImageSrc"
+    imageClass="gallery-image"
+    width="250"
+  >
+    <!--    <ng-template pTemplate="indicator"> Indicator Content </ng-template>-->
+  </p-image>
+</div>

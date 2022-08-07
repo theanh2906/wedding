@@ -1,13 +1,19 @@
 @import 'src/styles/variables';
 .section {
   &-header {
-    background-image: url('~src/assets/images/bg_ben_na.jpg');
+    background-image: url('~src/assets/images/wedding_bg.jpg');
     height: 100vh;
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
+    @media screen and (max-width: 580px) {
+      background-position: 101% 0;
+    }
+    @media screen and (max-width: 1676px) {
+      background-position: 100% 0;
+    }
     @media screen and (max-width: 900px) {
-      background-position: 70%;
+      background-position: 97% 0;
     }
   }
 }

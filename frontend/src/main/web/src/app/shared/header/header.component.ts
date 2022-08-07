@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 export interface MenuItem {
   url?: string;
@@ -14,7 +15,18 @@ export interface MenuItem {
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  tabletAndMobile!: MediaQueryList;
+  tabletAndMobileListener!: () => void;
+  constructor(
+    private media: MediaMatcher,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {
+    this.tabletAndMobile = media.matchMedia('(max-width: 800px)');
+    this.tabletAndMobileListener = () => this.changeDetectorRef.detectChanges();
+    this.tabletAndMobile.addEventListener('change', () => {
+      console.log(this.tabletAndMobile.matches);
+    });
+  }
 
   ngOnInit(): void {}
 

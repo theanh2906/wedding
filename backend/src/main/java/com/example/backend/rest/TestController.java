@@ -1,7 +1,7 @@
 package com.example.backend.rest;
 
-import com.example.backend.dtos.ResponseDto;
-import com.example.backend.models.User;
+import com.example.backend.models.dtos.ResponseDto;
+import com.example.backend.models.entities.Users;
 import com.example.backend.repositories.UserRepository;
 import com.example.backend.services.BarcodeService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -60,7 +59,7 @@ public class TestController {
     }
 
     @GetMapping("/users")
-    public List<User> findAll() {
+    public List<Users> findAll() {
         return repository.findAll();
     }
 

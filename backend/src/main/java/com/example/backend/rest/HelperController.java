@@ -1,7 +1,7 @@
 package com.example.backend.rest;
 
-import com.example.backend.dtos.LoginRequest;
-import com.example.backend.dtos.ResponseDto;
+import com.example.backend.models.dtos.LoginRequest;
+import com.example.backend.models.dtos.ResponseDto;
 import com.example.backend.utils.HelpUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

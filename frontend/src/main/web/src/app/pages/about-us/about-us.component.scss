@@ -1,0 +1,13 @@
+.about-us {
+  .title {
+    margin: 2rem;
+  }
+  div {
+    font-size: 20px;
+  }
+  .org-chart {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
+}

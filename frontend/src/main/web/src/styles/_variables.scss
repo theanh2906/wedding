@@ -1,4 +1,20 @@
-$font-family-base: 'Sacramento', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+$font-sacramento: 'Sacramento', cursive;
+$font-henny-penny: 'Henny Penny', cursive;
+$font-amita: 'Amita', cursive;
+$font-charm: 'Charm', cursive;
+$font-parisienne: 'Parisienne', cursive;
+$font-tangerine: 'Tangerine', cursive;
+$font-cookie: 'Cookie', cursive;
+$font-dancing-script: 'Dancing Script', cursive;
+
 $font-size: 3rem;
 $font-size-brand: 2rem;
 $font-size-menu: 1.5rem;

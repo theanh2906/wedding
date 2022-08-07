@@ -1,13 +1,13 @@
 package com.example.backend.rest;
 
-import com.example.backend.dtos.JwtResponse;
-import com.example.backend.dtos.LoginRequest;
-import com.example.backend.dtos.ResponseDto;
-import com.example.backend.dtos.SignupRequest;
+import com.example.backend.models.dtos.JwtResponse;
+import com.example.backend.models.dtos.LoginRequest;
+import com.example.backend.models.dtos.ResponseDto;
+import com.example.backend.models.dtos.SignupRequest;
 import com.example.backend.mappers.UserMapper;
-import com.example.backend.models.Role;
+import com.example.backend.models.entities.Roles;
 import com.example.backend.models.RoleEnum;
-import com.example.backend.models.User;
+import com.example.backend.models.entities.Users;
 import com.example.backend.repositories.RoleRepository;
 import com.example.backend.repositories.UserRepository;
 import com.example.backend.services.UserDetailsImpl;
@@ -91,9 +91,9 @@ public class AuthController {
                 return ResponseEntity.badRequest().body(new ResponseDto<>(false, "Email already exist!"));
             }
 
-            User user = UserMapper.toModel(signupRequest);
+            Users user = UserMapper.toModel(signupRequest);
             user.setPassword(encoder.encode(signupRequest.getPassword()));
-            Set<Role> roles = new HashSet<>();
+            Set<Roles> roles = new HashSet<>();
             roles.add(roleRepository.findByName(RoleEnum.ROLE_USER).orElse(null));
             user.setRoles(roles);
             userRepository.save(user);

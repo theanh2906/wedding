@@ -1,6 +1,6 @@
 package com.example.backend.services;
 
-import com.example.backend.models.User;
+import com.example.backend.models.entities.Users;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -36,7 +36,7 @@ public class UserDetailsImpl implements UserDetails {
         this.authorities = authorities;
     }
 
-    public static UserDetailsImpl build(User user) {
+    public static UserDetailsImpl build(Users user) {
         List<GrantedAuthority> authorities = user
                 .getRoles()
                 .stream()

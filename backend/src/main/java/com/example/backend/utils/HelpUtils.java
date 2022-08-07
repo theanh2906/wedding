@@ -1,9 +1,17 @@
 package com.example.backend.utils;
 
+import com.example.backend.models.entities.Images;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.coobird.thumbnailator.Thumbnails;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.json.JSONObject;
+import org.springframework.http.MediaType;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Base64;
 import java.util.Map;
 
@@ -34,5 +42,28 @@ public class HelpUtils {
 
     public static String stringifyJson(Object object) {
         return new JSONObject(object).toString();
+    }
+
+    public static String createBase64Image(byte[] bytes) {
+        return "data:image/jpeg;base64," + toBase64(bytes);
+    }
+
+    public static String toBase64(byte[] bytes) {
+        return Base64.getEncoder().encodeToString(bytes);
+    }
+
+    public static byte[] createThumbnailByteArr(byte[] source) throws IOException {
+        InputStream in = new ByteArrayInputStream(source);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        Thumbnails.of(in).size(300, 300).outputFormat("JPG").outputQuality(1).toOutputStream(outputStream);
+        return outputStream.toByteArray();
+    }
+
+    public static Images createThumbnailByteArr(Images source) throws IOException {
+        InputStream in = new ByteArrayInputStream(source.getData());
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        Thumbnails.of(in).size(300, 300).outputFormat("JPG").outputQuality(1).toOutputStream(outputStream);
+        source.setThumbnail(outputStream.toByteArray());
+        return source;
     }
 }

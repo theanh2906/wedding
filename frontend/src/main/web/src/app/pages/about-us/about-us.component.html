@@ -1,0 +1,44 @@
+<div class="about-us">
+  <h2 class="text-center title">Về chúng tôi</h2>
+  <div class="org-chart">
+    <p-organizationChart
+      (onNodeSelect)="onNodeSelect($event)"
+      [(selection)]="selectedNode"
+      [value]="brideFamily"
+      selectionMode="single"
+      styleClass="company"
+    >
+      <ng-template let-node pTemplate="person">
+        <div class="node-header">{{ node.label }}</div>
+        <div class="node-content">
+          <img src="http://localhost:8080/api/images" width="32" />
+          <div>{{ node.data.name }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-node pTemplate="department">
+        {{ node.label }}
+      </ng-template>
+    </p-organizationChart>
+    <p-organizationChart
+      (onNodeSelect)="onNodeSelect($event)"
+      [(selection)]="selectedNode"
+      [value]="groomFamily"
+      selectionMode="single"
+      styleClass="company"
+    >
+      <ng-template let-node pTemplate="person">
+        <div class="node-header">{{ node.label }}</div>
+        <div class="node-content">
+          <img
+            src="assets/showcase/images/demo/organization/{node.data.avatar}"
+            width="32"
+          />
+          <div>{{ node.data.name }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-node pTemplate="department">
+        {{ node.label }}
+      </ng-template>
+    </p-organizationChart>
+  </div>
+</div>
