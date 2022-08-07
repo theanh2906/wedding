@@ -46,22 +46,22 @@
                             <arguments>install --verbose</arguments>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>npm run build</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>run build --verbose</arguments>
-                        </configuration>
-                    </execution>
+<!--                    <execution>-->
+<!--                        <id>npm run build</id>-->
+<!--                        <goals>-->
+<!--                            <goal>npm</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <arguments>run build &#45;&#45;verbose</arguments>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                     <execution>
                         <id>${profile.active}</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <skip>true</skip>
+                            <skip>false</skip>
                             <arguments>run-script build-${profile.active}</arguments>
                         </configuration>
                         <phase>generate-resources</phase>
