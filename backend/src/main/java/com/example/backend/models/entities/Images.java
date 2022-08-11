@@ -1,5 +1,6 @@
 package com.example.backend.models.entities;
 
+import com.example.backend.models.Orientation;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -26,5 +27,6 @@ public class Images {
     @Column
     private byte[] data;
     @Column
-    private byte[] thumbnail;
+    @Enumerated(EnumType.STRING)
+    private Orientation orientation;
 }

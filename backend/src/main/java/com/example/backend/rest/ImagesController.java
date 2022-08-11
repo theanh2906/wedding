@@ -3,6 +3,7 @@ package com.example.backend.rest;
 import com.example.backend.models.dtos.GalleryImage;
 import com.example.backend.models.dtos.ImagesDto;
 import com.example.backend.services.ImagesService;
+import com.example.backend.utils.HelpUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,15 +36,20 @@ public class ImagesController {
     }
 
     @GetMapping("/{name}")
-    public void getImage(@PathVariable String name, final HttpServletResponse response) throws IOException {
-        InputStream in = new ByteArrayInputStream(imagesService.getImage(name).getData());
+    public void getImage(@PathVariable String name, @RequestParam(required = false) Integer s, final HttpServletResponse response) throws IOException {
+        InputStream in;
+        if (s != null) {
+            in = new ByteArrayInputStream(HelpUtils.createThumbnailByteArr(imagesService.getImage(name).getData(), s));
+        } else {
+            in = new ByteArrayInputStream(imagesService.getImage(name).getData());
+        }
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());
     }
 
     @GetMapping("/thumbnails/{name}")
-    public void getThumbnail(@PathVariable String name, final HttpServletResponse response) throws IOException {
-        InputStream in = new ByteArrayInputStream(imagesService.getThumbnail(name));
+    public void getThumbnail(@PathVariable String name, @RequestParam Integer s, final HttpServletResponse response) throws IOException {
+        InputStream in = new ByteArrayInputStream(HelpUtils.createThumbnailByteArr(imagesService.getImage(name).getData(), s));
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());
     }

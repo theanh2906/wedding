@@ -52,18 +52,10 @@ public class HelpUtils {
         return Base64.getEncoder().encodeToString(bytes);
     }
 
-    public static byte[] createThumbnailByteArr(byte[] source) throws IOException {
+    public static byte[] createThumbnailByteArr(byte[] source, int size) throws IOException {
         InputStream in = new ByteArrayInputStream(source);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        Thumbnails.of(in).size(300, 300).outputFormat("JPG").outputQuality(1).toOutputStream(outputStream);
+        Thumbnails.of(in).width(size).outputFormat("JPG").outputQuality(1).toOutputStream(outputStream);
         return outputStream.toByteArray();
-    }
-
-    public static Images createThumbnailByteArr(Images source) throws IOException {
-        InputStream in = new ByteArrayInputStream(source.getData());
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        Thumbnails.of(in).size(300, 300).outputFormat("JPG").outputQuality(1).toOutputStream(outputStream);
-        source.setThumbnail(outputStream.toByteArray());
-        return source;
     }
 }

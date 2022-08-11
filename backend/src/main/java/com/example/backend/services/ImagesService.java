@@ -12,7 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -25,13 +28,7 @@ public class ImagesService {
 
     public List<ImagesDto> upload(List<MultipartFile> files) {
         try {
-            List<Images> result = files.stream().map(ImagesMapper::toEntity).filter(Objects::nonNull).map(images -> {
-                try {
-                    return HelpUtils.createThumbnailByteArr(images);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }).collect(Collectors.toList());
+            List<Images> result = files.stream().map(ImagesMapper::toEntity).collect(Collectors.toList());
             return imagesRepository.saveAll(result).stream().map(ImagesMapper::toDto).collect(Collectors.toList());
         } catch (Exception e) {
             LOGGER.error("Could not upload file {}", e.getLocalizedMessage());
@@ -49,10 +46,6 @@ public class ImagesService {
 
     public ImagesDto getImage(String name) {
         return ImagesMapper.toDto(imagesRepository.findByNameIgnoreCase(name).orElse(new Images()));
-    }
-
-    public byte[] getThumbnail(String name) {
-        return Objects.requireNonNull(imagesRepository.findByNameIgnoreCase(name).orElse(null)).getThumbnail();
     }
 
     public List<GalleryImage> getAllGalleryImages() {

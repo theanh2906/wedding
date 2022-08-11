@@ -1,14 +1,22 @@
 package com.example.backend.mappers;
 
+import com.example.backend.models.Orientation;
 import com.example.backend.models.dtos.GalleryImage;
 import com.example.backend.models.dtos.ImagesDto;
 import com.example.backend.models.entities.Images;
 import com.example.backend.utils.HelpUtils;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -24,13 +32,18 @@ public class ImagesMapper {
 
     public static Images toEntity(MultipartFile file) {
         try {
+            ImageIcon img = new ImageIcon(file.getBytes());
             final Images entity = new Images();
             entity.setName(file.getOriginalFilename());
             entity.setData(file.getBytes());
             entity.setCreatedDate(LocalDateTime.now());
             entity.setExtension(Objects.requireNonNull(file.getOriginalFilename()).substring(file.getOriginalFilename().lastIndexOf(".") + 1).toLowerCase());
             entity.setSize(file.getSize());
-            entity.setThumbnail(HelpUtils.createThumbnailByteArr(file.getBytes()));
+            if (img.getIconWidth() < img.getIconHeight()) {
+                entity.setOrientation(Orientation.PORTRAIT);
+            } else {
+                entity.setOrientation(Orientation.LANDSCAPE);
+            }
             return entity;
         } catch (IOException e) {
             return null;
@@ -55,8 +68,8 @@ public class ImagesMapper {
 
     public static GalleryImage toGalleryImage(String name) {
         final GalleryImage dto = new GalleryImage();
-        dto.setThumbnailImageSrc("/api/images/thumbnails/" + name);
-        dto.setPreviewImageSrc("/api/images/" + name);
+        dto.setThumbnailImageSrc("/api/images/" + name + "?s=320");
+        dto.setPreviewImageSrc("/api/images/" + name + "?s=1280");
         dto.setTitle(name);
         dto.setAlt(name);
         return dto;
