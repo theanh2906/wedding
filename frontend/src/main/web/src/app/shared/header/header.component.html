@@ -1,4 +1,9 @@
-<div class="header">
+<div
+  #menu
+  [ngClass]="{ mobile: tabletAndMobile.matches }"
+  class="header"
+  id="menu"
+>
   <div class="header-brand">Ben Na Wedding</div>
   <div class="header-menu">
     <a (mouseover)="showSubMenu()" href="#"> Home </a>
@@ -6,4 +11,16 @@
     <a routerLink="gallery"> Celebration </a>
     <a routerLink="gallery"> Gallery </a>
   </div>
+  <div class="header-sidenav" style="display: none">
+    <a href="#"> Home </a>
+    <a routerLink="about-us"> About us </a>
+    <a routerLink="gallery"> Celebration </a>
+    <a routerLink="gallery"> Gallery </a>
+  </div>
+  <i
+    (click)="showSubMenu()"
+    *ngIf="tabletAndMobile.matches"
+    class="pi pi-bars indicator"
+    style="font-size: 2rem; position: fixed; right: 30px"
+  ></i>
 </div>

@@ -2,6 +2,6 @@
   <div class="overlay"></div>
 </div>
 <div class="header">
-  <app-header class="header-brand"></app-header>
+  <app-header (toggleSideNav)="onToggleSideNav($event)"></app-header>
 </div>
 <router-outlet></router-outlet>

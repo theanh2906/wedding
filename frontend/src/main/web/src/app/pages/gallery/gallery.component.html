@@ -1,13 +1,50 @@
+<!--<div class="my-gallery">-->
+<!--  <h1 class="text-center m-3">Pre-wedding</h1>-->
+<!--  <div class="gallery">-->
+<!--    <p-image-->
+<!--      *ngFor="let image of images"-->
+<!--      [alt]="image.alt"-->
+<!--      [preview]="true"-->
+<!--      [src]="image.previewImageSrc"-->
+<!--      imageClass="gallery-image"-->
+<!--      width="250"-->
+<!--    >-->
+<!--      &lt;!&ndash;    <ng-template pTemplate="indicator"> Indicator Content </ng-template>&ndash;&gt;-->
+<!--    </p-image>-->
+<!--  </div>-->
+<!--</div>-->
+
 <h1 class="text-center m-3">Pre-wedding</h1>
 <div class="gallery">
-  <p-image
-    *ngFor="let image of images"
-    [alt]="image.alt"
-    [preview]="true"
-    [src]="image.previewImageSrc"
-    imageClass="gallery-image"
-    width="250"
+  <p-galleria
+    [(visible)]="display"
+    [autoPlay]="true"
+    [circular]="true"
+    [containerStyle]="{ 'max-width': '1280px' }"
+    [numVisible]="5"
+    [responsiveOptions]="responsiveOptions"
+    [showIndicators]="false"
+    [showItemNavigators]="true"
+    [showThumbnails]="false"
+    [transitionInterval]="2000"
+    [value]="images"
   >
-    <!--    <ng-template pTemplate="indicator"> Indicator Content </ng-template>-->
-  </p-image>
+    <ng-template let-item pTemplate="item">
+      <img
+        (click)="display = true"
+        [src]="item.previewImageSrc"
+        loading="lazy"
+        style="width: 100%; display: block"
+      />
+      <!--      <p-image [preview]="true" [src]="item.previewImageSrc"> </p-image>-->
+    </ng-template>
+    <ng-template let-item pTemplate="thumbnail">
+      <div class="grid grid-nogutter justify-content-center">
+        <img
+          [src]="item.thumbnailImageSrc"
+          style="display: block; height: 50px; width: 50px"
+        />
+      </div>
+    </ng-template>
+  </p-galleria>
 </div>

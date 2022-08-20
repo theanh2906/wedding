@@ -11,5 +11,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [AboutUsComponent, GalleryComponent, HomeComponent],
   imports: [CommonModule, SharedModule, PrimengModule, FormsModule],
   exports: [AboutUsComponent, GalleryComponent, HomeComponent],
+  providers: [],
 })
 export class PagesModule {}

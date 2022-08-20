@@ -23,6 +23,7 @@ export class GalleryComponent implements OnInit {
       numVisible: 1,
     },
   ];
+  display = false;
 
   constructor(
     private imageService: ImagesService,
@@ -34,7 +35,6 @@ export class GalleryComponent implements OnInit {
   }
 
   private setValue(res: Images[]) {
-    console.log(res);
     this.images = res;
   }
 }

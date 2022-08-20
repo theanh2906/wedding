@@ -1,6 +1,6 @@
 @import 'src/styles/variables';
 .header {
-  margin-left: 40px;
+  margin: 40px;
   display: flex;
   &-brand {
     width: 100%;
@@ -21,4 +21,35 @@
       color: $color-white;
     }
   }
+
+  &.mobile {
+    .header {
+      margin: unset;
+      &-brand {
+        display: flex;
+        justify-content: center;
+      }
+      &-menu {
+        display: none;
+      }
+      &-sidenav {
+        background: $color-pink;
+        color: $color-white;
+        width: 60vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+.mobile {
 }
