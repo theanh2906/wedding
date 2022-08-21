@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimengModule } from './primeng.module';
 import { PagesModule } from './pages/pages.module';
 import * as Hammer from 'hammerjs';
+import { DiagramModule } from '@syncfusion/ej2-angular-diagrams';
 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
@@ -31,6 +32,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     BrowserAnimationsModule,
     PrimengModule,
     PagesModule,
+    DiagramModule,
   ],
   providers: [
     { provide: APP_CONFIG, useValue: AppConfig },

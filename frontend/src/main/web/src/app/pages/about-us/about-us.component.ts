@@ -15,32 +15,32 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     this.brideFamily = [
       {
-        label: 'Đàng gái',
+        label: 'Bride',
         type: 'person',
         styleClass: 'p-person',
         expanded: true,
         data: { name: '', avatar: 'walter.jpg' },
         children: [
           {
-            label: 'Ông ngoại',
+            label: 'Cha',
             type: 'person',
             styleClass: 'p-person',
             expanded: true,
-            data: { name: '', avatar: 'saul.jpg' },
+            data: { name: 'Mai Văn Phúc', avatar: 'saul.jpg' },
           },
           {
-            label: 'Bà ngoại',
+            label: 'Mẹ',
             type: 'person',
             styleClass: 'p-person',
             expanded: true,
-            data: { name: '', avatar: 'jesse.jpg' },
+            data: { name: 'Trương Thị Thu', avatar: 'jesse.jpg' },
           },
         ],
       },
     ];
     this.groomFamily = [
       {
-        label: 'Đàng trai',
+        label: 'Groom',
         type: 'person',
         styleClass: 'p-person',
         expanded: true,

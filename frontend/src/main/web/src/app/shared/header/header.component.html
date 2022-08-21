@@ -6,19 +6,21 @@
 >
   <div class="header-brand">Ben Na Wedding</div>
   <div class="header-menu">
-    <a (mouseover)="showSubMenu()" href="#"> Home </a>
+    <a routerLink="home"> Home </a>
     <a routerLink="about-us"> About us </a>
     <a routerLink="gallery"> Celebration </a>
     <a routerLink="gallery"> Gallery </a>
   </div>
   <div class="header-sidenav" style="display: none">
-    <a href="#"> Home </a>
-    <a routerLink="about-us"> About us </a>
-    <a routerLink="gallery"> Celebration </a>
-    <a routerLink="gallery"> Gallery </a>
+    <a (click)="onNavigate(Pages.Home)" routerLink="home"> Home </a>
+    <a (click)="onNavigate(Pages.AboutUs)" routerLink="about-us"> About us </a>
+    <a (click)="onNavigate(Pages.Gallery)" routerLink="gallery">
+      Celebration
+    </a>
+    <a (click)="onNavigate(Pages.Gallery)" routerLink="gallery"> Gallery </a>
   </div>
   <i
-    (click)="showSubMenu()"
+    (click)="toggleSubMenu()"
     *ngIf="tabletAndMobile.matches"
     class="pi pi-bars indicator"
     style="font-size: 2rem; position: fixed; right: 30px"

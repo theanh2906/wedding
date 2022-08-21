@@ -8,6 +8,7 @@
   .org-chart {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 10rem;
   }
 }

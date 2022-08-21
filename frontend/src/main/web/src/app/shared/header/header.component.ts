@@ -11,6 +11,8 @@ import {
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import $ from 'jquery';
+import { Router } from '@angular/router';
+import { Constants } from '../constants';
 
 export interface MenuItem {
   url?: string;
@@ -31,11 +33,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   tabletAndMobile!: MediaQueryList;
   desktop!: MediaQueryList;
   isOpen = false;
+  Pages = Constants.Pages;
   tabletAndMobileListener!: () => void;
   constructor(
     private media: MediaMatcher,
     private changeDetectorRef: ChangeDetectorRef,
-    private render: Renderer2
+    private render: Renderer2,
+    private router: Router
   ) {
     this.tabletAndMobile = media.matchMedia('(max-width: 800px)');
     this.desktop = media.matchMedia('(min-width: 801px)');
@@ -47,27 +51,33 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         this.doDesktop();
       }
     });
+    this.render.listen('window', 'click', this.detectMouseClick);
   }
-  doMobile() {
-    // const menu = $('#menu');
-    // this.render.addClass(this.menu.nativeElement, 'mobile');
-  }
+  doMobile() {}
 
   ngAfterViewInit(): void {}
 
   ngOnInit(): void {}
 
-  showSubMenu() {
+  toggleSubMenu() {
     this.isOpen = !this.isOpen;
-    console.log(this.isOpen);
-    $('.header-sidenav').fadeToggle({
-      duration: 500,
-      complete() {
-        $('.header-brand').toggle(500);
-      },
-    });
-    this.toggleSideNav.emit(true);
+    $('.header-sidenav').fadeToggle(200);
   }
 
   doDesktop() {}
+
+  detectMouseClick(e: any) {
+    const sideNav = $('.header-sidenav');
+    const indicator = $('.indicator');
+    if (e.target == sideNav.get()[0] || e.target == indicator.get()[0]) {
+      return;
+    }
+    if (sideNav.is(':visible')) {
+      sideNav.fadeToggle(200);
+    }
+  }
+
+  onNavigate(route: string) {
+    this.router.navigate([route]).then(this.toggleSubMenu);
+  }
 }
