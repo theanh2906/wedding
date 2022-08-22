@@ -4,11 +4,14 @@
   display: flex;
   &-brand {
     width: 100%;
-    //text-align: center;
+    cursor: pointer;
     font-size: $font-size-brand;
     margin: auto;
     color: $color-pink;
     font-weight: bold;
+    animation-name: headerAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }
   &-menu {
     font-size: $font-size-menu;
@@ -44,12 +47,58 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
+        //gap: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+        a {
+          width: 100%;
+          padding: 1rem;
+        }
       }
     }
   }
+
+  .indicator {
+    color: $color-white;
+  }
 }
 
-.mobile {
+@keyframes headerAnimation {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
 }

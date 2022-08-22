@@ -9,3 +9,23 @@
     }
   }
 }
+
+.home {
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  svg {
+    width: 100%;
+  }
+  #text {
+    stroke-dasharray: 397.8163146972656;
+    stroke-dashoffset: 397.8163146972656;
+    animation: fillSvg 2s linear backwards infinite;
+  }
+}
+
+@keyframes fillSvg {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

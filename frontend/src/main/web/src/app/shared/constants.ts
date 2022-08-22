@@ -3,5 +3,6 @@ export const Constants = {
     Home: 'home',
     Gallery: 'gallery',
     AboutUs: 'about-us',
+    Celebration: 'celebration',
   },
 };

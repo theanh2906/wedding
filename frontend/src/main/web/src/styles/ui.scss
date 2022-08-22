@@ -388,11 +388,11 @@ figure {
 }
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: #fff;
+  color: $color-pink;
 }
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
-  color: rgba(255, 255, 255, 0.5);
+  color: $color-pink;
   font-size: 25px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -421,7 +421,7 @@ figure {
 }
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid $color-pink;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   width: 100%;
@@ -440,8 +440,8 @@ figure {
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
   font-size: 20px;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: $color-pink;
+  border-bottom: 1px solid $color-pink;
   display: block;
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -452,11 +452,11 @@ figure {
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
+  color: $color-pink;
 }
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
-  color: white;
+  color: $color-pink;
   font-size: 20px;
 }
 #fh5co-counter .event-wrap .event-col,
@@ -556,7 +556,7 @@ figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-  color: #fff;
+  color: $color-pink;
   width: 160px;
   height: 160px;
   line-height: 50px;
@@ -1061,9 +1061,9 @@ form label {
 }
 .heart i {
   font-size: 20px;
-  background: #fff;
+  background: $color-pink-op-1;
   padding: 20px;
-  color: #f14e95;
+  color: $color-white;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1083,6 +1083,7 @@ form label {
   .couple-half {
     width: 100%;
     display: flex;
+    align-items: center;
   }
 }
 .couple-half {
@@ -1094,7 +1095,7 @@ form label {
   .desc-groom,
   .desc-bride {
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -1118,6 +1119,9 @@ form label {
   border-radius: 50%;
 }
 @media screen and (max-width: 480px) {
+  .couple-half:last-child {
+    margin-bottom: 3rem;
+  }
   .couple-half .groom,
   .couple-half .bride {
     width: 100%;
@@ -1151,6 +1155,7 @@ form label {
   .couple-half .bride {
     margin-left: 0;
     margin-right: 0;
+    flex: 1;
   }
   .couple-half .desc-groom {
     padding-right: 0;

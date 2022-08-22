@@ -4,25 +4,51 @@
   class="header"
   id="menu"
 >
-  <div class="header-brand">Ben Na Wedding</div>
+  <div [routerLink]="Pages.Home" class="header-brand">Ben Na Wedding</div>
   <div class="header-menu">
-    <a routerLink="home"> Home </a>
-    <a routerLink="about-us"> About us </a>
-    <a routerLink="gallery"> Celebration </a>
-    <a routerLink="gallery"> Gallery </a>
-  </div>
-  <div class="header-sidenav" style="display: none">
-    <a (click)="onNavigate(Pages.Home)" routerLink="home"> Home </a>
-    <a (click)="onNavigate(Pages.AboutUs)" routerLink="about-us"> About us </a>
-    <a (click)="onNavigate(Pages.Gallery)" routerLink="gallery">
+    <a routerLink="home" routerLinkActive="active-link-reverse"> Home </a>
+    <a routerLink="about-us" routerLinkActive="active-link-reverse">
+      About us
+    </a>
+    <a routerLink="celebration" routerLinkActive="active-link-reverse">
       Celebration
     </a>
-    <a (click)="onNavigate(Pages.Gallery)" routerLink="gallery"> Gallery </a>
+    <a routerLink="gallery" routerLinkActive="active-link-reverse"> Gallery </a>
+  </div>
+  <div class="header-sidenav" style="display: none">
+    <a
+      (click)="onNavigate(Pages.Home)"
+      [routerLink]="Pages.Home"
+      routerLinkActive="active-link"
+    >
+      Home
+    </a>
+    <a
+      (click)="onNavigate(Pages.AboutUs)"
+      [routerLink]="Pages.AboutUs"
+      routerLinkActive="active-link"
+    >
+      About us
+    </a>
+    <a
+      (click)="onNavigate(Pages.Celebration)"
+      [routerLink]="Pages.Celebration"
+      routerLinkActive="active-link"
+    >
+      Celebration
+    </a>
+    <a
+      (click)="onNavigate(Pages.Gallery)"
+      [routerLink]="Pages.Gallery"
+      routerLinkActive="active-link"
+    >
+      Gallery
+    </a>
   </div>
   <i
     (click)="toggleSubMenu()"
     *ngIf="tabletAndMobile.matches"
     class="pi pi-bars indicator"
-    style="font-size: 2rem; position: fixed; right: 30px"
+    style="font-size: 2rem; position: fixed; right: 30px; cursor: pointer"
   ></i>
 </div>
