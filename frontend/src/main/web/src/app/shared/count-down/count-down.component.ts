@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-count-down',
@@ -34,6 +35,11 @@ export class CountDownComponent implements AfterViewInit {
   day: number = 15;
 
   ngAfterViewInit() {
+    AOS.init({
+      duration: 2000,
+      easing: 'linear',
+      once: true,
+    });
     this.myTimer();
   }
 

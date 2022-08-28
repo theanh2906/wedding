@@ -16,6 +16,8 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     AOS.init({
       duration: 2000,
+      easing: 'linear',
+      once: true,
     });
     this.brideFamily = [
       {

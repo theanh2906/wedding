@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit() {
-    AOS.init();
-  }
+  ngOnInit() {}
 
   onToggleSideNav($event: boolean) {
     if ($event) {
