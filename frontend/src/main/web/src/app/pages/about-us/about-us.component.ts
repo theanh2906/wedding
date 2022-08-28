@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeNode } from 'primeng/api';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about-us',
@@ -13,6 +14,9 @@ export class AboutUsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    AOS.init({
+      duration: 2000,
+    });
     this.brideFamily = [
       {
         label: 'Bride',

@@ -68,6 +68,9 @@ a {
 .active-link {
   background: $color-white;
   color: $color-pink !important;
+  * {
+    animation: pulse 1s ease infinite;
+  }
   &-reverse {
     color: $color-pink-op-1 !important;
     animation: pulse 1s ease infinite;

@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { AppService, LoginRequest } from './app.service';
 import * as $ from 'jquery';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,9 @@ export class AppComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    AOS.init();
+  }
 
   onToggleSideNav($event: boolean) {
     if ($event) {
