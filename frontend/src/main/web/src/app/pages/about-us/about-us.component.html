@@ -16,7 +16,7 @@
           <div class="groom">
             <img
               alt="groom"
-              class="img-responsive"
+              class="rounded-full w-12"
               src="assets/images/groom.jpg"
             />
           </div>
@@ -30,7 +30,7 @@
           <div class="bride">
             <img
               alt="groom"
-              class="img-responsive"
+              class="rounded-full w-12"
               src="assets/images/bride.jpg"
             />
           </div>
@@ -43,44 +43,118 @@
     </div>
   </div>
   <div class="org-chart" data-aos="fade-right">
-    <p-organizationChart
-      (onNodeSelect)="onNodeSelect($event)"
-      [(selection)]="selectedNode"
-      [value]="brideFamily"
-      selectionMode="single"
-      styleClass="company"
-    >
-      <ng-template let-node pTemplate="person">
-        <div class="node-header">{{ node.label }}</div>
-        <div class="node-content">
-          <img src="http://localhost:8080/api/images" width="32" />
-          <div>{{ node.data.name }}</div>
+    <h2 class="text-center">Cô dâu</h2>
+    <div class="flex flex-col items-center gap-x-4 gap-y-4">
+      <div
+        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          alt=""
+          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+          src="assets/images/bg_ben_na.jpg"
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Ba vợ
+          </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
         </div>
-      </ng-template>
-      <ng-template let-node pTemplate="department">
-        {{ node.label }}
-      </ng-template>
-    </p-organizationChart>
-    <p-organizationChart
-      (onNodeSelect)="onNodeSelect($event)"
-      [(selection)]="selectedNode"
-      [value]="groomFamily"
-      selectionMode="single"
-      styleClass="company"
-    >
-      <ng-template let-node pTemplate="person">
-        <div class="node-header">{{ node.label }}</div>
-        <div class="node-content">
-          <img
-            src="assets/showcase/images/demo/organization/{node.data.avatar}"
-            width="32"
-          />
-          <div>{{ node.data.name }}</div>
+      </div>
+      <div
+        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          alt=""
+          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+          src="assets/images/bg_ben_na.jpg"
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight">Mẹ vợ</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
         </div>
-      </ng-template>
-      <ng-template let-node pTemplate="department">
-        {{ node.label }}
-      </ng-template>
-    </p-organizationChart>
+      </div>
+    </div>
+    <!--    <p-organizationChart-->
+    <!--      (onNodeSelect)="onNodeSelect($event)"-->
+    <!--      [(selection)]="selectedNode"-->
+    <!--      [value]="brideFamily"-->
+    <!--      selectionMode="single"-->
+    <!--      styleClass="company"-->
+    <!--    >-->
+    <!--      <ng-template let-node pTemplate="person">-->
+    <!--        <div class="node-header">{{ node.label }}</div>-->
+    <!--        <div class="node-content">-->
+    <!--          <img src="http://localhost:8080/api/images" width="32" />-->
+    <!--          <div>{{ node.data.name }}</div>-->
+    <!--        </div>-->
+    <!--      </ng-template>-->
+    <!--      <ng-template let-node pTemplate="department">-->
+    <!--        {{ node.label }}-->
+    <!--      </ng-template>-->
+    <!--    </p-organizationChart>-->
+    <h2 class="text-center">Chú rễ</h2>
+    <div class="flex flex-col items-center gap-x-4 gap-y-4">
+      <div
+        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          alt=""
+          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+          src="assets/images/bg_ben_na.jpg"
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Ba chồng
+          </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          alt=""
+          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+          src="assets/images/bg_ben_na.jpg"
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight">Mẹ chồng</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--    <p-organizationChart-->
+    <!--      (onNodeSelect)="onNodeSelect($event)"-->
+    <!--      [(selection)]="selectedNode"-->
+    <!--      [value]="groomFamily"-->
+    <!--      selectionMode="single"-->
+    <!--      styleClass="company"-->
+    <!--    >-->
+    <!--      <ng-template let-node pTemplate="person">-->
+    <!--        <div class="node-header">{{ node.label }}</div>-->
+    <!--        <div class="node-content">-->
+    <!--          <img-->
+    <!--            src="assets/showcase/images/demo/organization/{node.data.avatar}"-->
+    <!--            width="32"-->
+    <!--          />-->
+    <!--          <div>{{ node.data.name }}</div>-->
+    <!--        </div>-->
+    <!--      </ng-template>-->
+    <!--      <ng-template let-node pTemplate="department">-->
+    <!--        {{ node.label }}-->
+    <!--      </ng-template>-->
+    <!--    </p-organizationChart>-->
   </div>
 </div>
