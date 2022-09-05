@@ -1,0 +1,34 @@
+{
+  "COUNTDOWN": {
+    "DAY": "Days",
+    "MONTH": "Months",
+    "YEAR": "Years",
+    "HOUR": "Hours",
+    "MINUTE": "Minutes",
+    "SECOND": "Seconds"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "ABOUT_US": "About us",
+    "CELEBRATION": "Celebration",
+    "GALLERY": "Gallery"
+  },
+  "ABOUT_US": {
+    "TITLE": "About us",
+    "BRIDE": "Bride",
+    "BRIDE_FATHER": "Bride's father",
+    "BRIDE_MOTHER": "Bride's mother",
+    "GROOM": "Groom",
+    "GROOM_FATHER": "Groom's father",
+    "GROOM_MOTHER": "Groom's mother"
+  },
+  "CELEBRATION": {
+    "OUR_SPECIAL_EVENTS": "Our Special Events",
+    "WEDDING_EVENTS": "Wedding Events",
+    "WEDDING_PARTY": "Wedding party",
+    "DATE": {
+      "WEEK_DAY": "Thursday 15",
+      "MONTH_YEAR": "December, 2022"
+    }
+  }
+}

@@ -13,6 +13,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import $ from 'jquery';
 import { Router } from '@angular/router';
 import { Constants } from '../constants';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface MenuItem {
   url?: string;
@@ -35,11 +36,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   isOpen = false;
   Pages = Constants.Pages;
   tabletAndMobileListener!: () => void;
+  isChecked = false;
   constructor(
     private media: MediaMatcher,
     private changeDetectorRef: ChangeDetectorRef,
     private render: Renderer2,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) {
     this.tabletAndMobile = media.matchMedia('(max-width: 800px)');
     this.desktop = media.matchMedia('(min-width: 801px)');
@@ -79,5 +82,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   onNavigate(route: string) {
     this.router.navigate([route]).then(this.toggleSubMenu);
+  }
+
+  switchLanguage() {
+    if (this.isChecked) {
+      this.translate.use('vi');
+    } else {
+      this.translate.use('en');
+    }
   }
 }

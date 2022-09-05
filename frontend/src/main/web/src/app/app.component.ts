@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { AppService, LoginRequest } from './app.service';
 import * as $ from 'jquery';
 import AOS from 'aos';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,14 @@ export class AppComponent implements OnInit {
   backgroundImages = ['wedding_bg.jpg', 'bg_ben_na.jpg'];
   backgroundIdx = 0;
   selectedBackground = this.backgroundImages[0];
-  constructor(private renderer: Renderer2) {}
+  constructor(
+    private renderer: Renderer2,
+    private translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'vi']);
+    translate.setDefaultLang('vi');
+    translate.use('vi');
+  }
 
   ngOnInit() {
     // setInterval(() => {

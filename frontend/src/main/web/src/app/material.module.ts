@@ -33,6 +33,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
@@ -69,6 +71,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSortModule,
     MatTreeModule,
     MatChipsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
   ],
   exports: [
     CommonModule,
@@ -102,6 +106,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSortModule,
     MatTreeModule,
     MatChipsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
   ],
   providers: [
     MatDatepickerModule,

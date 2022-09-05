@@ -25,7 +25,17 @@
     }
   }
 
+  .language-switch {
+    color: $color-white;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
   &.mobile {
+    .language-switch {
+      display: none;
+    }
     .header {
       margin: unset;
       &-brand {
@@ -35,6 +45,7 @@
       &-menu {
         display: none;
       }
+
       &-sidenav {
         background: $color-pink;
         color: $color-white;
@@ -53,6 +64,12 @@
         a {
           width: 100%;
           padding: 1rem;
+        }
+        .language-switch-mobile {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+          margin-top: 1rem;
         }
       }
     }

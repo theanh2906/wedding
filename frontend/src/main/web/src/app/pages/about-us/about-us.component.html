@@ -1,5 +1,7 @@
 <div class="about-us">
-  <h2 class="text-center title" data-aos="zoom-in">About us</h2>
+  <h2 class="text-center title" data-aos="zoom-in">
+    {{ 'ABOUT_US.TITLE' | translate }}
+  </h2>
   <div id="fh5co-couple">
     <div class="container">
       <!--      <div class="row justify-content-center">-->
@@ -11,7 +13,7 @@
       <!--          <p>We invited you to celebrate our wedding</p>-->
       <!--        </div>-->
       <!--      </div>-->
-      <div class="couple-wrap animate-box" data-aos="fade-left">
+      <div class="couple-wrap animate-box" data-aos="zoom-in-up">
         <div class="couple-half">
           <div class="groom">
             <img
@@ -42,41 +44,45 @@
       </div>
     </div>
   </div>
-  <div class="org-chart" data-aos="fade-right">
-    <h2 class="text-center">Cô dâu</h2>
-    <div class="flex flex-col items-center gap-x-4 gap-y-4">
-      <div
-        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-        <img
-          alt=""
-          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-          src="assets/images/wedding_bg.jpg"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-            Ba vợ
-          </h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+  <div class="org-chart">
+    <div data-aos="fade-right">
+      <h2 class="text-center">{{ 'ABOUT_US.BRIDE' | translate }}</h2>
+      <div class="flex flex-col items-center gap-x-4 gap-y-4">
+        <div
+          class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        >
+          <img
+            alt=""
+            class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+            src="assets/images/wedding_bg.jpg"
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              {{ 'ABOUT_US.BRIDE_FATHER' | translate }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-        <img
-          alt=""
-          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-          src="assets/images/wedding_bg.jpg"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight">Mẹ vợ</h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+        <div
+          class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        >
+          <img
+            alt=""
+            class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+            src="assets/images/wedding_bg.jpg"
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight">
+              {{ 'ABOUT_US.BRIDE_MOTHER' | translate }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -98,40 +104,44 @@
     <!--        {{ node.label }}-->
     <!--      </ng-template>-->
     <!--    </p-organizationChart>-->
-    <h2 class="text-center">Chú rễ</h2>
-    <div class="flex flex-col items-center gap-x-4 gap-y-4">
-      <div
-        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-        <img
-          alt=""
-          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-          src="assets/images/wedding_bg.jpg"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-            Ba chồng
-          </h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+    <div data-aos="fade-right">
+      <h2 class="text-center">{{ 'ABOUT_US.GROOM' | translate }}</h2>
+      <div class="flex flex-col items-center gap-x-4 gap-y-4">
+        <div
+          class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        >
+          <img
+            alt=""
+            class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+            src="assets/images/wedding_bg.jpg"
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              {{ 'ABOUT_US.GROOM_FATHER' | translate }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-        <img
-          alt=""
-          class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-          src="assets/images/wedding_bg.jpg"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight">Mẹ chồng</h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+        <div
+          class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        >
+          <img
+            alt=""
+            class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
+            src="assets/images/wedding_bg.jpg"
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight">
+              {{ 'ABOUT_US.GROOM_MOTHER' | translate }}
+            </h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -7,10 +7,22 @@ import { SharedModule } from '../shared/shared.module';
 import { PrimengModule } from '../primeng.module';
 import { FormsModule } from '@angular/forms';
 import { CelebrationComponent } from './celebration/celebration.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [AboutUsComponent, GalleryComponent, HomeComponent, CelebrationComponent],
-  imports: [CommonModule, SharedModule, PrimengModule, FormsModule],
+  declarations: [
+    AboutUsComponent,
+    GalleryComponent,
+    HomeComponent,
+    CelebrationComponent,
+  ],
+  imports: [
+    CommonModule,
+    SharedModule,
+    PrimengModule,
+    FormsModule,
+    TranslateModule,
+  ],
   exports: [AboutUsComponent, GalleryComponent, HomeComponent],
   providers: [],
 })

@@ -13,6 +13,9 @@
           "strict": true
         }
       },
+      "i18n": {
+        "sourceLocale": "en-US"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

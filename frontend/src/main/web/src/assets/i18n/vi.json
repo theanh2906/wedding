@@ -1,0 +1,34 @@
+{
+  "COUNTDOWN": {
+    "DAY": "Ngày",
+    "MONTH": "Tháng",
+    "YEAR": "Năm",
+    "HOUR": "Giờ",
+    "MINUTE": "Phút",
+    "SECOND": "Giây"
+  },
+  "MENU": {
+    "HOME": "Trang chủ",
+    "ABOUT_US": "Về chúng tôi",
+    "CELEBRATION": "Tiệc cưới",
+    "GALLERY": "Thư viện ảnh"
+  },
+  "ABOUT_US": {
+    "TITLE": "Về chúng tôi",
+    "BRIDE": "Cô dâu",
+    "BRIDE_FATHER": "Cha cô dâu",
+    "BRIDE_MOTHER": "Mẹ cô dâu",
+    "GROOM": "Chú rễ",
+    "GROOM_FATHER": "Ba chú rễ",
+    "GROOM_MOTHER": "Mẹ chú rễ"
+  },
+  "CELEBRATION": {
+    "OUR_SPECIAL_EVENTS": "Sự kiện trọng đại",
+    "WEDDING_EVENTS": "Lê thành hôn",
+    "WEDDING_PARTY": "Tiệc cưới",
+    "DATE": {
+      "WEEK_DAY": "Thứ năm, ngày 15",
+      "MONTH_YEAR": "Tháng 12, năm 2022"
+    }
+  }
+}

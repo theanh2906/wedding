@@ -6,14 +6,26 @@
 >
   <div [routerLink]="Pages.Home" class="header-brand">Ben Na Wedding</div>
   <div class="header-menu">
-    <a routerLink="home" routerLinkActive="active-link-reverse"> Home </a>
+    <a routerLink="home" routerLinkActive="active-link-reverse">
+      {{ 'MENU.HOME' | translate }}
+    </a>
     <a routerLink="about-us" routerLinkActive="active-link-reverse">
-      About us
+      {{ 'MENU.ABOUT_US' | translate }}
     </a>
     <a routerLink="celebration" routerLinkActive="active-link-reverse">
-      Celebration
+      {{ 'MENU.CELEBRATION' | translate }}
     </a>
-    <a routerLink="gallery" routerLinkActive="active-link-reverse"> Gallery </a>
+    <a routerLink="gallery" routerLinkActive="active-link-reverse">
+      {{ 'MENU.GALLERY' | translate }}
+    </a>
+  </div>
+  <div class="language-switch">
+    <span>VI</span>
+    <mat-slide-toggle
+      (toggleChange)="switchLanguage()"
+      [(ngModel)]="isChecked"
+    ></mat-slide-toggle>
+    <span>EN</span>
   </div>
   <div class="header-sidenav" style="display: none">
     <a
@@ -21,29 +33,38 @@
       [routerLink]="Pages.Home"
       routerLinkActive="active-link"
     >
-      <div>Home</div>
+      <div>{{ 'MENU.HOME' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.AboutUs)"
       [routerLink]="Pages.AboutUs"
       routerLinkActive="active-link"
     >
-      <div>About us</div>
+      <div>{{ 'MENU.ABOUT_US' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.Celebration)"
       [routerLink]="Pages.Celebration"
       routerLinkActive="active-link"
     >
-      <div>Celebration</div>
+      <div>{{ 'MENU.CELEBRATION' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.Gallery)"
       [routerLink]="Pages.Gallery"
       routerLinkActive="active-link"
     >
-      <div>Gallery</div>
+      <div>{{ 'MENU.GALLERY' | translate }}</div>
     </a>
+    <div class="language-switch-mobile">
+      <span>VI</span>
+      <mat-slide-toggle
+        (click)="$event.stopPropagation()"
+        (toggleChange)="switchLanguage()"
+        [(ngModel)]="isChecked"
+      ></mat-slide-toggle>
+      <span>EN</span>
+    </div>
   </div>
   <i
     (click)="toggleSubMenu()"
