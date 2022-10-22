@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: $font-charm;
+  font-family: $font-fira-code;
 }
 
 .my-gallery {
@@ -71,11 +71,11 @@ a {
 .active-link {
   background: $color-white;
   color: $color-pink !important;
-  * {
-    animation: pulse 1s ease infinite;
-  }
+  //* {
+  //  animation: pulse 1s ease infinite;
+  //}
   &-reverse {
     color: $color-pink-op-1 !important;
-    animation: pulse 1s ease infinite;
+    //animation: pulse 1s ease infinite;
   }
 }
