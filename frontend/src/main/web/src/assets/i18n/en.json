@@ -29,6 +29,9 @@
     "DATE": {
       "WEEK_DAY": "Thursday 15",
       "MONTH_YEAR": "December, 2022"
-    }
+    },
+    "WEDDING_PLACE": "At White Palace",
+    "WEDDING_ADDRESS": "108 Pham Van Dong Street, Hiep Binh Chanh Ward, Thu Duc City, Ho Chi Minh City",
+    "WEDDING_MAP": "Map"
   }
 }

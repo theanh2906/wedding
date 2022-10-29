@@ -12,6 +12,16 @@
 html,
 body {
   height: 100%;
+  button {
+    color: $color-pink;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    &:hover {
+      background: $color-pink;
+      color: $color-white;
+    }
+  }
 }
 *,
 h1,

@@ -23,12 +23,23 @@
                   <span>{{ 'CELEBRATION.DATE.WEEK_DAY' | translate }}</span>
                   <span>{{ 'CELEBRATION.DATE.MONTH_YEAR' | translate }}</span>
                 </div>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean.
-                </p>
+                <p>{{ 'CELEBRATION.WEDDING_PLACE' | translate }}</p>
+                <p>{{ 'CELEBRATION.WEDDING_ADDRESS' | translate }}</p>
+                <button (click)="showMap()">
+                  {{ 'CELEBRATION.WEDDING_MAP' | translate }}
+                </button>
+                <div *ngIf="isDisplayed" class="map" data-aos="zoom-in-up">
+                  <div class="mapouter">
+                    <div class="gmap_canvas">
+                      <iframe
+                        class="gmap_iframe"
+                        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=White Palace Thủ Đức&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        width="100%"
+                      ></iframe
+                      ><a href="https://piratebay-proxys.com/">Piratebay</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ import AOS from 'aos';
   styleUrls: ['./celebration.component.scss'],
 })
 export class CelebrationComponent implements OnInit {
+  isDisplayed = false;
   constructor() {}
 
   ngOnInit(): void {
@@ -15,5 +16,9 @@ export class CelebrationComponent implements OnInit {
       easing: 'linear',
       once: true,
     });
+  }
+
+  showMap() {
+    this.isDisplayed = true;
   }
 }
