@@ -6,9 +6,10 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { AngularMaterialModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [CountDownComponent, HeaderComponent],
+  declarations: [CountDownComponent, HeaderComponent, FooterComponent],
   exports: [CountDownComponent, HeaderComponent],
   imports: [
     CommonModule,

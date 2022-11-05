@@ -19,11 +19,11 @@
             <img
               alt="groom"
               class="rounded-full w-12"
-              src="assets/images/groom.jpg"
+              src="assets/images/groom_avatar.jpg"
             />
           </div>
           <div class="desc-groom">
-            <h2>Tang The Anh</h2>
+            <h2>{{ 'ABOUT_US.GROOM_NAME' | translate }}</h2>
             <p>{{ 'ABOUT_US.GROOM' | translate }}</p>
           </div>
         </div>
@@ -33,11 +33,11 @@
             <img
               alt="groom"
               class="rounded-full w-12"
-              src="assets/images/bride.jpg"
+              src="assets/images/bride_avatar.jpg"
             />
           </div>
           <div class="desc-bride">
-            <h2>Mai Kim Phung</h2>
+            <h2>{{ 'ABOUT_US.BRIDE_NAME' | translate }}</h2>
             <p>{{ 'ABOUT_US.BRIDE' | translate }}</p>
           </div>
         </div>
@@ -45,16 +45,17 @@
     </div>
   </div>
   <div class="org-chart">
-    <div data-aos="fade-right">
+    <div>
       <h2 class="text-center">{{ 'ABOUT_US.BRIDE' | translate }}</h2>
       <div class="flex flex-col items-center gap-x-4 gap-y-4">
         <div
           class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          data-aos="fade-left"
         >
           <img
             alt=""
             class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-            src="assets/images/wedding_bg.jpg"
+            src="assets/images/bride_father.jpg"
           />
           <div class="flex flex-col justify-between p-4 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
@@ -68,11 +69,12 @@
         </div>
         <div
           class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          data-aos="fade-right"
         >
           <img
             alt=""
             class="object-cover w-full rounded-lg sm:h-auto md:h-36 sm:w-full md:rounded-r-lg"
-            src="assets/images/wedding_bg.jpg"
+            src="assets/images/bride_mother.jpg"
           />
           <div class="flex flex-col justify-between p-4 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight">
@@ -104,11 +106,12 @@
     <!--        {{ node.label }}-->
     <!--      </ng-template>-->
     <!--    </p-organizationChart>-->
-    <div data-aos="fade-right">
+    <div>
       <h2 class="text-center">{{ 'ABOUT_US.GROOM' | translate }}</h2>
       <div class="flex flex-col items-center gap-x-4 gap-y-4">
         <div
           class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          data-aos="fade-left"
         >
           <img
             alt=""
@@ -127,6 +130,7 @@
         </div>
         <div
           class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          data-aos="fade-right"
         >
           <img
             alt=""

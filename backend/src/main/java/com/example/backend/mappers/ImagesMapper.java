@@ -68,7 +68,7 @@ public class ImagesMapper {
 
     public static GalleryImage toGalleryImage(String name) {
         final GalleryImage dto = new GalleryImage();
-        dto.setThumbnailImageSrc("/api/images/" + name + "?s=320");
+        dto.setThumbnailImageSrc("/api/images/" + name + "?s=1280");
         dto.setPreviewImageSrc("/api/images/" + name);
         dto.setTitle(name);
         dto.setAlt(name);

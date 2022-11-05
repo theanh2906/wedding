@@ -36,7 +36,8 @@ export class ImagesService {
 
   format(source: Images[]) {
     return source.map((value) => {
-      value.previewImageSrc = this.config.endpoints.api + value.previewImageSrc;
+      value.previewImageSrc =
+        this.config.endpoints.api + value.thumbnailImageSrc;
       value.thumbnailImageSrc =
         this.config.endpoints.api + value.thumbnailImageSrc;
       return value;
