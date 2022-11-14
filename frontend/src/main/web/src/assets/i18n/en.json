@@ -16,13 +16,18 @@
   "ABOUT_US": {
     "TITLE": "About us",
     "BRIDE": "Bride",
+    "BRIDE_FAMILY": "Bride's family",
     "BRIDE_NAME": "Kim Phung Mai",
     "BRIDE_FATHER": "Bride's father",
+    "BRIDE_FATHER_DESCRIPTION": "Bride's father",
     "BRIDE_MOTHER": "Bride's mother",
+    "BRIDE_MOTHER_DESCRIPTION": "Bride's mother",
     "GROOM": "Groom",
+    "GROOM_FAMILY": "Groom's family",
     "GROOM_NAME": "The Anh Tang",
     "GROOM_FATHER": "Groom's father",
-    "GROOM_MOTHER": "Groom's mother"
+    "GROOM_FATHER_DESCRIPTION": "Groom's father",
+    "GROOM_MOTHER_DESCRIPTION": "Groom's mother"
   },
   "CELEBRATION": {
     "OUR_SPECIAL_EVENTS": "Our Special Events",

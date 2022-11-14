@@ -31,10 +31,14 @@ export class GalleryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 2000);
     this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
   }
 
   private setValue(res: Images[]) {
+    console.log(res);
     this.images = res;
   }
 }

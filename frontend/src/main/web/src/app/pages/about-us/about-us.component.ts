@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TreeNode } from 'primeng/api';
 import AOS from 'aos';
 
@@ -14,6 +14,11 @@ export class AboutUsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    (document.getElementById('target') as HTMLElement).scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+      inline: 'nearest',
+    });
     AOS.init({
       duration: 2000,
       easing: 'linear',
