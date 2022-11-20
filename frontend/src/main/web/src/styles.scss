@@ -13,7 +13,6 @@ html,
 body {
   height: 100%;
   button {
-    color: $color-pink;
     border: 1px solid;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -31,7 +30,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: $font-fira-code;
+  font-family: $font-main;
 }
 
 .my-gallery {

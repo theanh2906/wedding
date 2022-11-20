@@ -56,7 +56,6 @@ body {
 }
 
 a {
-  color: #f14e95;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -64,7 +63,6 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f14e95;
   outline: none;
   text-decoration: none;
 }
@@ -217,7 +215,6 @@ figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #f14e95;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
@@ -388,11 +385,9 @@ figure {
 }
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: $color-pink;
 }
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
-  color: $color-pink;
   font-size: 25px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -421,7 +416,7 @@ figure {
 }
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
-  border: 2px solid $color-pink;
+  border: 2px solid;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   width: 100%;
@@ -440,8 +435,7 @@ figure {
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
   font-size: 20px;
-  color: $color-pink;
-  border-bottom: 1px solid $color-pink;
+  border-bottom: 1px solid;
   display: block;
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -452,11 +446,9 @@ figure {
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
   display: block;
-  color: $color-pink;
 }
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
-  color: $color-pink;
   font-size: 20px;
 }
 #fh5co-counter .event-wrap .event-col,
@@ -556,7 +548,6 @@ figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-  color: $color-pink;
   width: 160px;
   height: 160px;
   line-height: 50px;
@@ -787,7 +778,6 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  color: #f14e95;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -806,7 +796,6 @@ figure {
   position: relative;
 }
 .fh5co-contact-info ul li:before {
-  color: #f14e95;
   position: absolute;
   left: 0;
   top: 0.05em;
@@ -899,7 +888,6 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #f14e95;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -1091,7 +1079,6 @@ form label {
 .couple-half {
   h2 {
     //font-family: 'Sacramento', Arial, serif;
-    color: #f14e95;
     font-size: 2.5rem !important;
   }
   .desc-groom {
@@ -1206,7 +1193,6 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #f14e95;
 }
 .feature-center p,
 .feature-center h3 {
@@ -1230,7 +1216,6 @@ form label {
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: bold;
-    color: #f14e95;
     //font-family: $font-charm;
   }
   h3 {
@@ -1251,7 +1236,7 @@ form label {
   font-size: 13px;
   letter-spacing: 2px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.4);
+  //color: rgba(0, 0, 0, 0.4);
 }
 
 #fh5co-testimonial .wrap-testimony {
@@ -1268,7 +1253,6 @@ form label {
   display: block;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #f14e95;
   font-weight: 300;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
@@ -1361,7 +1345,6 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #f14e95;
 }
 .feature-left .feature-copy {
   float: left;
@@ -1747,7 +1730,6 @@ form label {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #f14e95;
   border: 2px solid #f14e95;
 }
 .btn-primary.btn-outline:hover,
@@ -1902,7 +1884,6 @@ form label {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #f14e95;
 }
 
 .row-pb-md {

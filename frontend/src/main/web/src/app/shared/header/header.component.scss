@@ -7,7 +7,7 @@
     cursor: pointer;
     font-size: $font-size-brand;
     margin: auto;
-    color: $color-pink;
+    color: $color-white;
     font-weight: bold;
     //animation-name: headerAnimation;
     //animation-duration: 1.5s;
@@ -76,7 +76,7 @@
   }
 
   .indicator {
-    color: $color-pink;
+    color: $color_pink;
     z-index: 1000;
   }
 }
