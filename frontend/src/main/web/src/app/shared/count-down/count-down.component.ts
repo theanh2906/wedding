@@ -35,11 +35,11 @@ export class CountDownComponent implements AfterViewInit {
   day: number = 15;
 
   ngAfterViewInit() {
-    AOS.init({
-      duration: 2000,
-      easing: 'linear',
-      once: true,
-    });
+    // AOS.init({
+    //   duration: 2000,
+    //   easing: 'linear',
+    //   once: true,
+    // });
     this.myTimer();
   }
 

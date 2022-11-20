@@ -23,7 +23,12 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     TranslateModule,
   ],
-  exports: [AboutUsComponent, GalleryComponent, HomeComponent],
+  exports: [
+    AboutUsComponent,
+    GalleryComponent,
+    HomeComponent,
+    CelebrationComponent,
+  ],
   providers: [],
 })
 export class PagesModule {}

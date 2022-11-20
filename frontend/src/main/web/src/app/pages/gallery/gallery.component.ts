@@ -30,12 +30,7 @@ export class GalleryComponent implements OnInit {
     @Inject(APP_CONFIG) private config: IAppConfig
   ) {}
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 2000);
-    this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
-  }
+  ngOnInit(): void {}
 
   private setValue(res: Images[]) {
     console.log(res);

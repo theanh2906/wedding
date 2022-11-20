@@ -81,7 +81,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   onNavigate(route: string) {
-    this.router.navigate([route]).then(this.toggleSubMenu);
+    // this.router.navigate([route]).then(this.toggleSubMenu);
   }
 
   switchLanguage() {

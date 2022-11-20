@@ -6,16 +6,16 @@
 >
   <div [routerLink]="Pages.Home" class="header-brand">Ben Na Wedding</div>
   <div class="header-menu">
-    <a routerLink="home" routerLinkActive="active-link-reverse">
+    <a href="#home" routerLinkActive="active-link-reverse">
       {{ 'MENU.HOME' | translate }}
     </a>
-    <a routerLink="about-us" routerLinkActive="active-link-reverse">
+    <a href="#about-us" routerLinkActive="active-link-reverse">
       {{ 'MENU.ABOUT_US' | translate }}
     </a>
-    <a routerLink="celebration" routerLinkActive="active-link-reverse">
+    <a href="#celebration" routerLinkActive="active-link-reverse">
       {{ 'MENU.CELEBRATION' | translate }}
     </a>
-    <a routerLink="gallery" routerLinkActive="active-link-reverse">
+    <a href="#gallery" routerLinkActive="active-link-reverse">
       {{ 'MENU.GALLERY' | translate }}
     </a>
   </div>
@@ -30,28 +30,28 @@
   <div class="header-sidenav" style="display: none">
     <a
       (click)="onNavigate(Pages.Home)"
-      [routerLink]="Pages.Home"
+      [href]="Pages.Home"
       routerLinkActive="active-link"
     >
       <div>{{ 'MENU.HOME' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.AboutUs)"
-      [routerLink]="Pages.AboutUs"
+      [href]="['#' + Pages.AboutUs]"
       routerLinkActive="active-link"
     >
       <div>{{ 'MENU.ABOUT_US' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.Celebration)"
-      [routerLink]="Pages.Celebration"
+      [href]="['#' + Pages.Celebration]"
       routerLinkActive="active-link"
     >
       <div>{{ 'MENU.CELEBRATION' | translate }}</div>
     </a>
     <a
       (click)="onNavigate(Pages.Gallery)"
-      [routerLink]="Pages.Gallery"
+      [href]="['#' + Pages.Gallery]"
       routerLinkActive="active-link"
     >
       <div>{{ 'MENU.GALLERY' | translate }}</div>

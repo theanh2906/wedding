@@ -76,7 +76,8 @@
   }
 
   .indicator {
-    color: $color-white;
+    color: $color-pink;
+    z-index: 1000;
   }
 }
 

@@ -14,11 +14,6 @@ export class AboutUsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    (document.getElementById('target') as HTMLElement).scrollIntoView({
-      block: 'start',
-      behavior: 'smooth',
-      inline: 'nearest',
-    });
     AOS.init({
       duration: 2000,
       easing: 'linear',
