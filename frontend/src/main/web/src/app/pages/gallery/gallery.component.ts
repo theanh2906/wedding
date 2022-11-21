@@ -9,6 +9,7 @@ import { APP_CONFIG, IAppConfig } from '../../config/app.config';
 })
 export class GalleryComponent implements OnInit {
   images: Images[] = [];
+  showImage: boolean[] = [];
   responsiveOptions: any[] = [
     {
       breakpoint: '1024px',
@@ -34,8 +35,16 @@ export class GalleryComponent implements OnInit {
     this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
   }
 
+  viewFullscreen(url: string) {
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0`;
+    open(url, '_blank', params);
+  }
+
   private setValue(res: Images[]) {
     console.log(res);
     this.images = res;
+    res.forEach((each, idx) => {
+      this.showImage[idx] = false;
+    });
   }
 }

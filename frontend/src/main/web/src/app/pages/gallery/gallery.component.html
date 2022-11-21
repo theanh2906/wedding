@@ -29,13 +29,17 @@
     [transitionInterval]="2000"
     [value]="images"
   >
-    <ng-template let-item pTemplate="item">
+    <ng-template let-index let-item pTemplate="item">
       <img
-        (click)="display = true"
+        (click)="viewFullscreen(item.previewImageSrc)"
         [src]="item.previewImageSrc"
+        class="gallery-item"
         loading="lazy"
-        style="width: 100%; display: block"
+        style="width: 100vw; display: block"
       />
+      <p-dialog [(visible)]="showImage[index]">
+        <img [src]="item.previewImageSrc" />
+      </p-dialog>
       <!--      <p-image [preview]="true" [src]="item.previewImageSrc"> </p-image>-->
     </ng-template>
     <ng-template let-item pTemplate="thumbnail">

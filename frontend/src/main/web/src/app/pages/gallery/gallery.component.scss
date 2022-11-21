@@ -4,4 +4,13 @@
   padding: 2rem;
   display: flex;
   justify-content: center;
+  .eye {
+    display: none;
+    position: absolute;
+  }
+  &-item {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
