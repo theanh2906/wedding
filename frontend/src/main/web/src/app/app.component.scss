@@ -4,15 +4,15 @@
     height: 100vh;
     background-size: cover;
     background-position: top center;
-    //background-attachment: fixed;
+    background-attachment: inherit;
     @media screen and (max-width: 580px) {
-      background-position: top 0 left 25%;
+      background-position: 25% 0;
     }
     @media screen and (max-width: 1676px) {
-      background-position: top 0 left 25%;
+      background-position: 25% 0;
     }
     @media screen and (max-width: 900px) {
-      background-position: top 0 left 25%;
+      background-position: 25% 0;
     }
   }
 }
