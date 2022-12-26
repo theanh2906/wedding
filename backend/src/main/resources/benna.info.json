@@ -1,0 +1,12 @@
+{
+  "web": {
+    "client_id": "214441181958-1ha9gt11hkot9gfnofvo6n66b39jfuho.apps.googleusercontent.com",
+    "project_id": "ben-na-wedding",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": ["https://benna.info/"],
+    "javascript_origins": ["https://benna.info"]
+  }
+}

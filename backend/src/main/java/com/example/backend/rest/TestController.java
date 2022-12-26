@@ -4,6 +4,7 @@ import com.example.backend.models.dtos.ResponseDto;
 import com.example.backend.models.entities.Users;
 import com.example.backend.repositories.UserRepository;
 import com.example.backend.services.BarcodeService;
+import com.example.backend.services.GoogleDriveService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,8 @@ public class TestController {
     private UserRepository repository;
     @Autowired
     private BarcodeService barcodeService;
+    @Autowired
+    private GoogleDriveService googleDriveService;
     @GetMapping("/all")
     public String allAccess() {
         return "Public access";
@@ -74,5 +77,10 @@ public class TestController {
         IOUtils.copy(inputStream, response.getOutputStream());
         IOUtils.closeQuietly(response.getOutputStream());
         return ResponseEntity.ok().body("Success");
+    }
+
+    @GetMapping("/file-list")
+    public List<String> getFileList() throws Exception {
+        return googleDriveService.getFileList();
     }
 }
