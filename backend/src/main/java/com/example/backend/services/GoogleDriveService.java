@@ -53,7 +53,7 @@ public class GoogleDriveService {
     protected Drive service;
     protected NetHttpTransport protocol;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() throws Exception {
         this.protocol = GoogleNetHttpTransport.newTrustedTransport();
         this.service = new Drive.Builder(this.protocol, JSON_FACTORY, getCredentials(this.protocol))
