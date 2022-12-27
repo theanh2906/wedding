@@ -21,6 +21,7 @@ export const AppConfig: IAppConfig = {
       getAll: `${apiUrl}/api/images`,
       getNames: `${apiUrl}/api/images/names`,
       getGalleryImages: `${apiUrl}/api/images/gallery`,
+      getImages: `${apiUrl}/api/images/file-list`,
     },
   },
 };

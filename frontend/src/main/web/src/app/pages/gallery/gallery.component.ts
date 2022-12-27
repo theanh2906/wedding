@@ -10,6 +10,7 @@ import { APP_CONFIG, IAppConfig } from '../../config/app.config';
 export class GalleryComponent implements OnInit {
   images: Images[] = [];
   showImage: boolean[] = [];
+  listImgLink: string[] = [];
   responsiveOptions: any[] = [
     {
       breakpoint: '1024px',
@@ -33,6 +34,11 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
+    this.imageService.getImages(1).subscribe({
+      next: (res) => {
+        this.listImgLink = res;
+      },
+    });
   }
 
   viewFullscreen(url: string) {

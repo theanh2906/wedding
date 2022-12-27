@@ -2,8 +2,10 @@ package com.example.backend.rest;
 
 import com.example.backend.models.dtos.GalleryImage;
 import com.example.backend.models.dtos.ImagesDto;
+import com.example.backend.services.GoogleDriveService;
 import com.example.backend.services.ImagesService;
 import com.example.backend.utils.HelpUtils;
+import com.google.api.services.drive.model.File;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,8 @@ import java.util.stream.Collectors;
 public class ImagesController {
     @Autowired
     private ImagesService imagesService;
+    @Autowired
+    private GoogleDriveService googleDriveService;
 
     @PostMapping("/upload")
     public ResponseEntity<?> uploadImage(@RequestParam("file") List<MultipartFile> file) {
@@ -88,5 +92,15 @@ public class ImagesController {
         } catch (Exception e) {
             return new ArrayList<>();
         }
+    }
+
+    @GetMapping("/file-list")
+    public List<String> getFileList(@RequestParam Integer n) throws Exception {
+        return googleDriveService.getFileList(n);
+    }
+
+    @GetMapping("/folder-list")
+    public List<File> getFolderList() throws Exception {
+        return googleDriveService.getFolderList();
     }
 }

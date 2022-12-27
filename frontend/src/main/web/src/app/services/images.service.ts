@@ -43,4 +43,15 @@ export class ImagesService {
       return value;
     });
   }
+
+  getImages(folder: number) {
+    return this.http.get<string[]>(
+      `${this.config.endpoints.images.getImages}`,
+      {
+        params: {
+          n: folder,
+        },
+      }
+    );
+  }
 }

@@ -5,6 +5,7 @@ import com.example.backend.models.entities.Users;
 import com.example.backend.repositories.UserRepository;
 import com.example.backend.services.BarcodeService;
 import com.example.backend.services.GoogleDriveService;
+import com.google.api.services.drive.model.File;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,10 +78,5 @@ public class TestController {
         IOUtils.copy(inputStream, response.getOutputStream());
         IOUtils.closeQuietly(response.getOutputStream());
         return ResponseEntity.ok().body("Success");
-    }
-
-    @GetMapping("/file-list")
-    public List<String> getFileList() throws Exception {
-        return googleDriveService.getFileList();
     }
 }
