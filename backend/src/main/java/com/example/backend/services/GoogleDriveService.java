@@ -53,7 +53,7 @@ public class GoogleDriveService {
     protected Drive service;
     protected NetHttpTransport protocol;
 
-//    @PostConstruct
+    @PostConstruct
     public void init() throws Exception {
         this.protocol = GoogleNetHttpTransport.newTrustedTransport();
         this.service = new Drive.Builder(this.protocol, JSON_FACTORY, getCredentials(this.protocol))
@@ -84,7 +84,7 @@ public class GoogleDriveService {
                 .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
                 .setAccessType("offline")
                 .build();
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8080).build();
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().build();
         //returns an authorized Credential object.
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
     }
