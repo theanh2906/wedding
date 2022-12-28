@@ -27,6 +27,8 @@ public class Images {
     @Column
     private byte[] data;
     @Column
+    private Integer type;
+    @Column
     @Enumerated(EnumType.STRING)
     private Orientation orientation;
 }

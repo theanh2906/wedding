@@ -34,20 +34,20 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
-    this.imageService.getImages(1).subscribe({
-      next: (res) => {
-        this.listImgLink = res;
-      },
-    });
+    // this.imageService.getImages(1).subscribe({
+    //   next: (res) => {
+    //     this.listImgLink = res;
+    //   },
+    // });
   }
 
   viewFullscreen(url: string) {
+    console.log(url);
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0`;
     open(url, '_blank', params);
   }
 
   private setValue(res: Images[]) {
-    console.log(res);
     this.images = res;
     res.forEach((each, idx) => {
       this.showImage[idx] = false;

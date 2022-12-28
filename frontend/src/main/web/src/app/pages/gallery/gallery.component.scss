@@ -2,8 +2,12 @@
   width: 100%;
   margin: auto;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  img {
+    max-width: 100%;
+    width: 30vw;
+  }
   .eye {
     display: none;
     position: absolute;
@@ -12,5 +16,13 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  a {
+    color: black !important;
   }
 }

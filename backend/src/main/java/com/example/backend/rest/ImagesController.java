@@ -31,9 +31,9 @@ public class ImagesController {
     private GoogleDriveService googleDriveService;
 
     @PostMapping("/upload")
-    public ResponseEntity<?> uploadImage(@RequestParam("file") List<MultipartFile> file) {
+    public ResponseEntity<?> uploadImage(@RequestParam("file") List<MultipartFile> file, @RequestParam Integer type) {
         try {
-            return ResponseEntity.ok().body(String.format("Successfully upload %s images", imagesService.upload(file).size()));
+            return ResponseEntity.ok().body(String.format("Successfully upload %s images", imagesService.upload(file, type).size()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(String.format("Failed to upload. Error: %s", e.getMessage()));
         }

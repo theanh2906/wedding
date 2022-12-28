@@ -16,8 +16,11 @@ export class CountDownComponent implements AfterViewInit {
   minutes: any;
   hours: any;
   days: any;
+  currentDay: any;
   year: number = 2022;
+  currentYear: any;
   month: number = 11;
+  currentMonth: any;
   months = [
     'Jan',
     'Feb',
@@ -53,7 +56,9 @@ export class CountDownComponent implements AfterViewInit {
     this.minutes = Math.floor(this.seconds / 60);
     this.hours = Math.floor(this.minutes / 60);
     this.days = Math.floor(this.hours / 24);
-
+    this.currentDay = new Date().getDate();
+    this.currentMonth = new Date().getMonth() + 1;
+    this.currentYear = new Date().getFullYear();
     this.hours %= 24;
     this.minutes %= 60;
     this.seconds %= 60;
@@ -62,11 +67,11 @@ export class CountDownComponent implements AfterViewInit {
     this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
 
     // @ts-ignore
-    document.getElementById('days').innerText = this.days;
+    document.getElementById('days').innerText = this.currentDay;
     // @ts-ignore
-    document.getElementById('hours').innerText = this.hours;
+    document.getElementById('hours').innerText = this.currentMonth;
     // @ts-ignore
-    document.getElementById('mins').innerText = this.minutes;
+    document.getElementById('mins').innerText = this.currentYear;
     // @ts-ignore
     document.getElementById('seconds').innerText = this.seconds;
 
