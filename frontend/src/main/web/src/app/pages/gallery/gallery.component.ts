@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Images, ImagesService } from '../../services/images.service';
 import { APP_CONFIG, IAppConfig } from '../../config/app.config';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-gallery',
@@ -8,7 +9,8 @@ import { APP_CONFIG, IAppConfig } from '../../config/app.config';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-  images: Images[] = [];
+  morningImages: Images[] = [];
+  weddingParty: Images[] = [];
   showImage: boolean[] = [];
   listImgLink: string[] = [];
   responsiveOptions: any[] = [
@@ -33,7 +35,15 @@ export class GalleryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.imageService.getGalleryImages().subscribe(this.setValue.bind(this));
+    forkJoin([
+      this.imageService.getGalleryImages(1),
+      this.imageService.getGalleryImages(2),
+    ]).subscribe({
+      next: (res) => {
+        this.morningImages = res[0];
+        this.weddingParty = res[1];
+      },
+    });
     // this.imageService.getImages(1).subscribe({
     //   next: (res) => {
     //     this.listImgLink = res;
@@ -45,12 +55,5 @@ export class GalleryComponent implements OnInit {
     console.log(url);
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0`;
     open(url, '_blank', params);
-  }
-
-  private setValue(res: Images[]) {
-    this.images = res;
-    res.forEach((each, idx) => {
-      this.showImage[idx] = false;
-    });
   }
 }

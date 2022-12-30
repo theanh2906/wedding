@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent implements OnInit {
   title = 'web';
   token = '';
-  backgroundImages: string[] = ['wedding_bg.jpg'];
+  backgroundImages: string[] = ['wedding_bg_1.jpg'];
   backgroundIdx = 0;
   selectedBackground = this.backgroundImages[0];
   constructor(

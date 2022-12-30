@@ -4,6 +4,7 @@ import com.example.backend.models.Orientation;
 import com.example.backend.models.dtos.GalleryImage;
 import com.example.backend.models.dtos.ImagesDto;
 import com.example.backend.models.entities.Images;
+import com.example.backend.models.entities.Metadata;
 import com.example.backend.utils.HelpUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.BeanUtils;
@@ -68,10 +69,16 @@ public class ImagesMapper {
 
     public static GalleryImage toGalleryImage(String name) {
         final GalleryImage dto = new GalleryImage();
-        dto.setThumbnailImageSrc("/api/images/thumbnails/" + name + "?s=720");
+        dto.setThumbnailImageSrc("/api/images/thumbnails/" + name + "?s=360");
         dto.setPreviewImageSrc("/api/images/" + name);
         dto.setTitle(name);
         dto.setAlt(name);
         return dto;
+    }
+
+    public static Metadata getMetadata(Images source) {
+        final Metadata target = new Metadata();
+        BeanUtils.copyProperties(source, target);
+        return target;
     }
 }

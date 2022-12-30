@@ -4,7 +4,9 @@ import com.example.backend.mappers.ImagesMapper;
 import com.example.backend.models.dtos.GalleryImage;
 import com.example.backend.models.dtos.ImagesDto;
 import com.example.backend.models.entities.Images;
+import com.example.backend.models.entities.Metadata;
 import com.example.backend.repositories.ImagesRepository;
+import com.example.backend.repositories.MetadataRepository;
 import com.example.backend.utils.HelpUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,8 @@ public class ImagesService {
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
     @Autowired
     private ImagesRepository imagesRepository;
+    @Autowired
+    private MetadataRepository metadataRepository;
 
     @Transactional
     public List<ImagesDto> upload(List<MultipartFile> files, Integer type) {
@@ -53,5 +57,21 @@ public class ImagesService {
 
     public List<GalleryImage> getAllGalleryImages() {
         return imagesRepository.getNames().stream().map(ImagesMapper::toGalleryImage).collect(Collectors.toList());
+    }
+
+    public List<GalleryImage> getAllGalleryImagesByFolder(Integer folder) {
+        return imagesRepository.getNamesWithFolder(folder).stream().map(ImagesMapper::toGalleryImage).collect(Collectors.toList());
+    }
+
+    public boolean migrateData() {
+        try {
+            List<Images> allImages = imagesRepository.getMigrateData();
+            List<Metadata> savedMetadataList = allImages.stream().map(ImagesMapper::getMetadata).collect(Collectors.toList());
+            metadataRepository.saveAll(savedMetadataList);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

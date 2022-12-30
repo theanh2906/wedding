@@ -62,7 +62,7 @@ public class ImagesController {
     public List<String> getImagesAsBase64() {
         try {
             return imagesService.getAllImages().stream().map(ImagesDto::getUrl).collect(Collectors.toList());
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ArrayList<>();
         }
     }
@@ -71,7 +71,7 @@ public class ImagesController {
     public String getImageAsBase64(@PathVariable String name) {
         try {
             return imagesService.getImage(name).getUrl();
-        } catch (Exception e){
+        } catch (Exception e) {
             return "";
         }
     }
@@ -80,15 +80,17 @@ public class ImagesController {
     public List<String> getImagesNames() {
         try {
             return imagesService.getNames();
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ArrayList<>();
         }
     }
 
     @GetMapping("/gallery")
-    public List<GalleryImage> getAllImagesForGallery() {
+    public List<GalleryImage> getAllImagesForGallery(@RequestParam(required = false) Integer folder) {
         try {
-            return imagesService.getAllGalleryImages();
+            if (folder != null) {
+                return imagesService.getAllGalleryImagesByFolder(folder);
+            } else return imagesService.getAllGalleryImages();
         } catch (Exception e) {
             return new ArrayList<>();
         }

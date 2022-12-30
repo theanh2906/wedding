@@ -5,6 +5,7 @@ import com.example.backend.models.entities.Users;
 import com.example.backend.repositories.UserRepository;
 import com.example.backend.services.BarcodeService;
 import com.example.backend.services.GoogleDriveService;
+import com.example.backend.services.ImagesService;
 import com.google.api.services.drive.model.File;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class TestController {
     @Autowired
     private BarcodeService barcodeService;
     @Autowired
-    private GoogleDriveService googleDriveService;
+    private ImagesService imagesService;
     @GetMapping("/all")
     public String allAccess() {
         return "Public access";
@@ -78,5 +79,10 @@ public class TestController {
         IOUtils.copy(inputStream, response.getOutputStream());
         IOUtils.closeQuietly(response.getOutputStream());
         return ResponseEntity.ok().body("Success");
+    }
+
+    @GetMapping("/migrate-data")
+    public String migrateData() {
+        return imagesService.migrateData() ? "Success" : "Fail";
     }
 }

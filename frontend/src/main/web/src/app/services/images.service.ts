@@ -28,9 +28,13 @@ export class ImagesService {
     return this.http.get<string[]>(`${this.config.endpoints.images.getNames}`);
   }
 
-  getGalleryImages() {
+  getGalleryImages(folder: number) {
     return this.http
-      .get<Images[]>(`${this.config.endpoints.images.getGalleryImages}`)
+      .get<Images[]>(`${this.config.endpoints.images.getGalleryImages}`, {
+        params: {
+          folder,
+        },
+      })
       .pipe(map(this.format.bind(this)));
   }
 
@@ -48,7 +52,7 @@ export class ImagesService {
       `${this.config.endpoints.images.getImages}`,
       {
         params: {
-          n: folder,
+          folder,
         },
       }
     );
