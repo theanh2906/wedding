@@ -6,22 +6,22 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CelebrationComponent } from './pages/celebration/celebration.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   component: HomeComponent,
-  // },
-  // {
-  //   path: 'gallery',
-  //   component: GalleryComponent,
-  // },
-  // {
-  //   path: 'about-us',
-  //   component: AboutUsComponent,
-  // },
-  // {
-  //   path: 'celebration',
-  //   component: CelebrationComponent,
-  // },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
+  },
+  {
+    path: 'about-us',
+    component: AboutUsComponent,
+  },
+  {
+    path: 'celebration',
+    component: CelebrationComponent,
+  },
   {
     path: '**',
     pathMatch: 'full',

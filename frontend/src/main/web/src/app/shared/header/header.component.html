@@ -5,71 +5,71 @@
   id="menu"
 >
   <div [routerLink]="Pages.Home" class="header-brand">Ben Na Wedding</div>
-  <!--  <div class="header-menu">-->
-  <!--    <a href="#home" routerLinkActive="active-link-reverse">-->
-  <!--      {{ 'MENU.HOME' | translate }}-->
-  <!--    </a>-->
-  <!--    <a href="#about-us" routerLinkActive="active-link-reverse">-->
-  <!--      {{ 'MENU.ABOUT_US' | translate }}-->
-  <!--    </a>-->
-  <!--    <a href="#celebration" routerLinkActive="active-link-reverse">-->
-  <!--      {{ 'MENU.CELEBRATION' | translate }}-->
-  <!--    </a>-->
-  <!--    <a href="#gallery" routerLinkActive="active-link-reverse">-->
-  <!--      {{ 'MENU.GALLERY' | translate }}-->
-  <!--    </a>-->
-  <!--  </div>-->
-  <!--  <div class="language-switch">-->
-  <!--    <span>VI</span>-->
-  <!--    <mat-slide-toggle-->
-  <!--      (toggleChange)="switchLanguage()"-->
-  <!--      [(ngModel)]="isChecked"-->
-  <!--    ></mat-slide-toggle>-->
-  <!--    <span>EN</span>-->
-  <!--  </div>-->
-  <!--  <div class="header-sidenav" style="display: none">-->
-  <!--    <a-->
-  <!--      (click)="onNavigate(Pages.Home)"-->
-  <!--      [href]="Pages.Home"-->
-  <!--      routerLinkActive="active-link"-->
-  <!--    >-->
-  <!--      <div>{{ 'MENU.HOME' | translate }}</div>-->
-  <!--    </a>-->
-  <!--    <a-->
-  <!--      (click)="onNavigate(Pages.AboutUs)"-->
-  <!--      [href]="['#' + Pages.AboutUs]"-->
-  <!--      routerLinkActive="active-link"-->
-  <!--    >-->
-  <!--      <div>{{ 'MENU.ABOUT_US' | translate }}</div>-->
-  <!--    </a>-->
-  <!--    <a-->
-  <!--      (click)="onNavigate(Pages.Celebration)"-->
-  <!--      [href]="['#' + Pages.Celebration]"-->
-  <!--      routerLinkActive="active-link"-->
-  <!--    >-->
-  <!--      <div>{{ 'MENU.CELEBRATION' | translate }}</div>-->
-  <!--    </a>-->
-  <!--    <a-->
-  <!--      (click)="onNavigate(Pages.Gallery)"-->
-  <!--      [href]="['#' + Pages.Gallery]"-->
-  <!--      routerLinkActive="active-link"-->
-  <!--    >-->
-  <!--      <div>{{ 'MENU.GALLERY' | translate }}</div>-->
-  <!--    </a>-->
-  <!--    <div class="language-switch-mobile">-->
-  <!--      <span>VI</span>-->
-  <!--      <mat-slide-toggle-->
-  <!--        (click)="$event.stopPropagation()"-->
-  <!--        (toggleChange)="switchLanguage()"-->
-  <!--        [(ngModel)]="isChecked"-->
-  <!--      ></mat-slide-toggle>-->
-  <!--      <span>EN</span>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--  <i-->
-  <!--    (click)="toggleSubMenu()"-->
-  <!--    *ngIf="tabletAndMobile.matches"-->
-  <!--    class="pi pi-bars indicator"-->
-  <!--    style="font-size: 2rem; position: fixed; right: 30px; cursor: pointer"-->
-  <!--  ></i>-->
+  <div class="header-menu">
+    <a href="#home" routerLinkActive="active-link-reverse">
+      {{ 'MENU.HOME' | translate }}
+    </a>
+    <a href="#about-us" routerLinkActive="active-link-reverse">
+      {{ 'MENU.ABOUT_US' | translate }}
+    </a>
+    <a href="#celebration" routerLinkActive="active-link-reverse">
+      {{ 'MENU.CELEBRATION' | translate }}
+    </a>
+    <a href="#gallery" routerLinkActive="active-link-reverse">
+      {{ 'MENU.GALLERY' | translate }}
+    </a>
+  </div>
+  <div class="language-switch">
+    <span>VI</span>
+    <mat-slide-toggle
+      (toggleChange)="switchLanguage()"
+      [(ngModel)]="isChecked"
+    ></mat-slide-toggle>
+    <span>EN</span>
+  </div>
+  <div class="header-sidenav" style="display: none">
+    <a
+      (click)="onNavigate(Pages.Home)"
+      [href]="Pages.Home"
+      routerLinkActive="active-link"
+    >
+      <div>{{ 'MENU.HOME' | translate }}</div>
+    </a>
+    <a
+      (click)="onNavigate(Pages.AboutUs)"
+      [href]="['#' + Pages.AboutUs]"
+      routerLinkActive="active-link"
+    >
+      <div>{{ 'MENU.ABOUT_US' | translate }}</div>
+    </a>
+    <a
+      (click)="onNavigate(Pages.Celebration)"
+      [href]="['#' + Pages.Celebration]"
+      routerLinkActive="active-link"
+    >
+      <div>{{ 'MENU.CELEBRATION' | translate }}</div>
+    </a>
+    <a
+      (click)="onNavigate(Pages.Gallery)"
+      [href]="['#' + Pages.Gallery]"
+      routerLinkActive="active-link"
+    >
+      <div>{{ 'MENU.GALLERY' | translate }}</div>
+    </a>
+    <div class="language-switch-mobile">
+      <span>VI</span>
+      <mat-slide-toggle
+        (click)="$event.stopPropagation()"
+        (toggleChange)="switchLanguage()"
+        [(ngModel)]="isChecked"
+      ></mat-slide-toggle>
+      <span>EN</span>
+    </div>
+  </div>
+  <i
+    (click)="toggleSubMenu()"
+    *ngIf="tabletAndMobile.matches"
+    class="pi pi-bars indicator"
+    style="font-size: 2rem; position: fixed; right: 30px; cursor: pointer"
+  ></i>
 </div>
