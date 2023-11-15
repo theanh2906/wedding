@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://benna.info',
+  apiUrl: '127.0.0.1',
 };
