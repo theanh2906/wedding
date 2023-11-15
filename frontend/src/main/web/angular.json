@@ -48,7 +48,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "wedding",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
