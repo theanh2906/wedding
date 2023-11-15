@@ -1,10 +1,9 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { AppService, LoginRequest } from './app.service';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import * as $ from 'jquery';
-import AOS from 'aos';
-import { TranslateService } from '@ngx-translate/core';
-import { ImagesService } from './services/images.service';
-import { map } from 'rxjs/operators';
+import {TranslateService} from '@ngx-translate/core';
+import {ImagesService} from './services/images.service';
+import * as vi from "src/assets/i18n/vi.json";
+import * as en from "src/assets/i18n/en.json";
 
 @Component({
   selector: 'app-root',
@@ -22,6 +21,8 @@ export class AppComponent implements OnInit {
     private translate: TranslateService,
     private imagesService: ImagesService
   ) {
+    translate.setTranslation('en', en)
+    translate.setTranslation('vi', vi)
     translate.addLangs(['en', 'vi']);
     translate.setDefaultLang('vi');
     translate.use('vi');
